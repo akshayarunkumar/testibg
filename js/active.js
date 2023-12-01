@@ -4,12 +4,20 @@
     var $window = $(window);
 
     // :: Preloader Active Code
-    $window.on('load', function () {
-        $('#preloader').fadeOut('slow', function () {
-            $(this).remove();
-        });
-    });
+    // $window.on('load', function () {
+    //     $('#preloader').fadeOut('slow', function () {
+    //         $(this).remove();
+    //     });
+    // });
 
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#preloader').fadeOut('slow', function () {
+                $(this).remove();
+            });
+        }, 200);
+    });
+    
     // :: Nav Active Code
     if ($.fn.classyNav) {
         $('#originalNav').classyNav();
